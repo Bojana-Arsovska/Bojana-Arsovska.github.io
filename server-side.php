@@ -16,6 +16,8 @@ if (!$signedRequest->validateSignature($_POST)) {
     die('Invalid signature');
 }
 
+$encSignedReq = $signedRequest->getSignedRequest($_POST);
+
 echo <<<HTML
 <html>
     <head>
