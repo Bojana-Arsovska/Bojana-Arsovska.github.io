@@ -15,3 +15,20 @@ echo 'Bla';
 if (!$signedRequest->validateSignature($_POST)) {
     die('Invalid signature');
 }
+
+echo <<<HTML
+<html>
+    <head>
+        <title>Hello World</title>
+        <script type="text/javascript">
+            var Speakap = { appId: "/* App ID */", signedRequest: "$encSignedReq" };
+        </script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/speakap.js"></script>
+    </head>
+
+    <body>
+        <p>Hello Speakap user!</p>
+    </body>
+</html>
+HTML;
