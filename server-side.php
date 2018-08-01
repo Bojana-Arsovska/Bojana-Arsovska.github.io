@@ -12,6 +12,6 @@ $signedRequest = new \Speakap\SDK\SignedRequest('29018071e8000714', '04fd15176c3
 
 echo 'Bla';
 
-if (!$validator->validateSignature($_POST)) {
+if (!$signedRequest->validateSignature($_POST)) {
     die('Invalid signature');
 }
