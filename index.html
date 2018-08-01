@@ -1,1 +1,20 @@
-Hello Worls
+<html>
+    <head>
+        <title>Hello World</title>
+        <script type="text/javascript">
+            var Speakap = { "YjNmN2VkMWQ5Y2MxZGI2MzZhZTgzNWQzM2RkOTY2YWZhZTdhODM2NDBhYzA2Nzk3NGQ0MzZmYTI4Y2M5N2E3Ng" };
+        </script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/speakap.js"></script>
+    </head>
+
+  <body>
+      <script type="text/javascript">
+     Speakap.doHandshake.then(function() {
+         Speakap.getLoggedInUser().then(function(user) {
+             document.write('<p>Hello ' + user.fullName + '!</p>');
+         });
+     });
+     </script>
+  </body>
+</html>

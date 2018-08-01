@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ab4a12421ffd3f66af3dced47f1ec0e3",
+    "packages": [
+        {
+            "name": "speakap/sdk",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SpeakapBV/Speakap-SDK.git",
+                "reference": "96b47fb7d31386b5701a186143605f4ac446f015"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SpeakapBV/Speakap-SDK/zipball/96b47fb7d31386b5701a186143605f4ac446f015",
+                "reference": "96b47fb7d31386b5701a186143605f4ac446f015",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.10"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Speakap\\Tests": [
+                        "php/tests/"
+                    ],
+                    "Speakap": [
+                        "php/src/"
+                    ]
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "The Speakap SDK",
+            "support": {
+                "source": "https://github.com/SpeakapBV/Speakap-SDK/tree/master",
+                "issues": "https://github.com/SpeakapBV/Speakap-SDK/issues"
+            },
+            "time": "2017-03-21T16:34:52+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

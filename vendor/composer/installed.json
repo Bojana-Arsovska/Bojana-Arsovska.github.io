@@ -1,0 +1,45 @@
+[
+    {
+        "name": "speakap/sdk",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/SpeakapBV/Speakap-SDK.git",
+            "reference": "96b47fb7d31386b5701a186143605f4ac446f015"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/SpeakapBV/Speakap-SDK/zipball/96b47fb7d31386b5701a186143605f4ac446f015",
+            "reference": "96b47fb7d31386b5701a186143605f4ac446f015",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.4.10"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "4.0.*"
+        },
+        "time": "2017-03-21T16:34:52+00:00",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Speakap\\Tests": [
+                    "php/tests/"
+                ],
+                "Speakap": [
+                    "php/src/"
+                ]
+            }
+        },
+        "license": [
+            "MIT"
+        ],
+        "description": "The Speakap SDK",
+        "support": {
+            "source": "https://github.com/SpeakapBV/Speakap-SDK/tree/master",
+            "issues": "https://github.com/SpeakapBV/Speakap-SDK/issues"
+        }
+    }
+]
