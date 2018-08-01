@@ -48,7 +48,7 @@ $signedParams = $signedRequest->getSignedParameters($_POST);
 
 $baseUrl = 'https://api.test.speakap.nl/networks/' . $signedParams['networkEID'];
 
-$accessToken = '29018071e8000714_04fd15176c3175cec8d9a41c35752e5efacf236d4e84885c6e5f2e4bca060127'/;
+$accessToken = /* App ID */ '29018071e8000714_04fd15176c3175cec8d9a41c35752e5efacf236d4e84885c6e5f2e4bca060127' /* Secret */;
 
 $ch = curl_init("$baseUrl/users/{$signedParams['userEID']}/");
 
