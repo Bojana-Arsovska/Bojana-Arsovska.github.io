@@ -13,6 +13,7 @@
             "responsive": false
             "devices": "all",
             "url": "https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php",
+            "urlAppendNetwork": true,
             "icon": "\uf0ac",
             "label": {
                 "en-US": "John's app"
