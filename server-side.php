@@ -66,4 +66,4 @@ curl_close($ch);
 
 $user = json_decode($response);
 
-echo "<p>Hello !</p>";
+echo "<p>Hello {$user->fullName}!</p>";
