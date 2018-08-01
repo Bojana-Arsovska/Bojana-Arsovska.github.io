@@ -21,7 +21,7 @@ echo <<<HTML
     <head>
         <title>Hello World</title>
         <script type="text/javascript">
-            var Speakap = { appId: "/* App ID */", signedRequest: "$encSignedReq" };
+            var Speakap = { appId: "29018071e8000714", signedRequest: "$encSignedReq" };
         </script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" src="js/speakap.js"></script>
