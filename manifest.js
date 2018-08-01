@@ -1,6 +1,6 @@
 {
     "name": {
-        "en-US": "Hello World"
+        "en-US": "Bob's app"
     },
     "icon": "http://developer.speakap.io/world-icon.png",
     "permissions": [],
@@ -15,20 +15,8 @@
                 "en-US": "Hello World"
             }
         },
-        {         // FOR EXTERNAL POSITION , NOT THE ONE IN THE MENU
-            "position": "external",
-            "url": "https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php",
-            "urlAppendNetwork": true,
-            "devices": "all",
-            "label": {
-                "en-US": "Hello World"
-            }
-        }
     ],
-    "redirectUris": [
-        "https://bojana-arsovska.github.io/server-side.php"
-    ]
 }
 // We have generated the following ID and secret:
-// ID: 28fd61b50f000204
-// secret: 9081caf1649b2911f74fd0f158ca260f8d619fea8fcb4e41686f1b2511bb6a9a
+// ID: 29018071e8000714
+// secret: 04fd15176c3175cec8d9a41c35752e5efacf236d4e84885c6e5f2e4bca060127
