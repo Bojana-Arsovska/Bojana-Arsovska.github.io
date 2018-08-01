@@ -31,11 +31,13 @@ echo <<<HTML
 
     <body>
       <script type="text/javascript">
-          Speakap.doHandshake.then(function() {
-              Speakap.getLoggedInUser().then(function(user) {
-                  document.write('<p>Hello ' + user.fullName + '!</p>');
-              });
+      Speakap.doHandshake.then(function() {
+        Speakap.getLoggedInUser().then(function(loggedInUser) {
+            Speakap.ajax('/users/' + loggedInUser.EID + '/').done(function(user) {
+              document.write('<p>Hello ' + user.fullName + '!</p>');
+            });
           });
+        });
       </script>
   </body>
 </html>
