@@ -1,27 +1,28 @@
 {
     "name": {
-        "en-US": "Hello World"
+        "en-US": "John's app"
     },
-    "icon": "http://developer.speakap.io/world-icon.png",
+    "icon": "http://developer.speakap.io/paw.png",
     "permissions": [
-        "get_profiles"
+        "list_groups",
     ],
     "entries": [
         {
             "position": "main",
+            "responsive": false
             "devices": "all",
-            "url": "https://yourdomain.com/app/folder/helloworld.php",
+            "url": "https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php",
             "icon": "\uf0ac",
             "label": {
-                "en-US": "Hello World"
+                "en-US": "John's app"
             }
         },
         {
             "position": "network-timeline-widget",
-            "url": "https://yourdomain.com/app/folder/helloworld.php",
+            "url": "https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php",
             "devices": "all",
             "label": {
-                "en-US": "Hello World"
+                "en-US": "John's app"
             }
         }
     ]
