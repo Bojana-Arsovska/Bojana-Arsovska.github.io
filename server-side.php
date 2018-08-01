@@ -30,7 +30,13 @@ echo <<<HTML
     </head>
 
     <body>
-        <p>Hello Speakap user!</p>
-    </body>
+      <script type="text/javascript">
+          Speakap.doHandshake.then(function() {
+              Speakap.getLoggedInUser().then(function(user) {
+                  document.write('<p>Hello ' + user.fullName + '!</p>');
+              });
+          });
+      </script>
+  </body>
 </html>
 HTML;
