@@ -15,3 +15,5 @@ echo 'bla';
 if (!$signedRequest->validateSignature($_POST)) {
     die('Invalid signature');
 }
+
+echo "something "
