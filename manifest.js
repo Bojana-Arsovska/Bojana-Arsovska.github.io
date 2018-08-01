@@ -9,7 +9,7 @@
     ],
     "entries": [
         {
-            "position": "main",
+            "position": "external",
             "responsive": false
             "devices": "all",
             "url": "https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php",
