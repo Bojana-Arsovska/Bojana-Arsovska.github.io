@@ -4,7 +4,8 @@
     },
     "icon": "http://developer.speakap.io/paw.png",
     "permissions": [
-        "list_groups",
+        "get_profiles",
+        "list_groups"
     ],
     "entries": [
         {
@@ -26,8 +27,5 @@
             }
         }
     ]
-}
-
-// We have generated the following ID and secret:
-// ID: 29018071e8000714
-// secret: 04fd15176c3175cec8d9a41c35752e5efacf236d4e84885c6e5f2e4bca060127
+    // ID: 2902858cc6000a00
+    // secret: 83355b5649dfb16063ebf05e9e692d358e7973df0eeb0365401ea412b70b2e99
