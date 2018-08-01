@@ -1,31 +1,17 @@
- <?php
+<?php
 
-/* Assume signed request has been properly validated */
+error_reporting(E_ALL);
 
-$signedParams = $signedRequest->getSignedParameters($_POST);
+ini_set("display_error",1);
 
-$baseUrl = 'https://api.speakap.io/networks/' . $signedParams['networkEID'];
+require __DIR__ . 'vendor/autoload.php'
 
-$accessToken = YjNmN2VkMWQ5Y2MxZGI2MzZhZTgzNWQzM2RkOTY2YWZhZTdhODM2NDBhYzA2Nzk3NGQ0MzZmYTI4Y2M5N2E3Ng;
+use Speakap\SDK as SpeakapSDK;
 
-$ch = curl_init("$baseUrl/users/{$signedParams['userEID']}/");
+$signedRequest = new SpeakapSDK\SignedRequest('28fd61b50f000204', '9081caf1649b2911f74fd0f158ca260f8d619fea8fcb4e41686f1b2511bb6a9a');
 
-curl_setopt_array($ch, array(
-    CURLOPT_HEADER => false,
-    CURLOPT_POST => true,
-    CURLOPT_POSTFIELDS => http_build_query(array(
-        'grant_type' => 'authorization_code',
-        'code' => '/* Authorization Code */',
-        'redirect_uri' => 'https://yourdomain.com/app/folder/helloworld_sso.php',
-        'client_id' => '/* App ID */',
-        'client_secret' => '/* Secret */'
-    )),
-    CURLOPT_RETURNTRANSFER => true
-));
+echo 'bla';
 
-$response = curl_exec($ch);
-curl_close($ch);
-
-$user = json_decode($response);
-
-echo "<p>Hello {$user->fullName}!</p>";
+if (!$signedRequest->validateSignature($_POST)) {
+    die('Invalid signature');
+}

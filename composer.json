@@ -1,6 +1,12 @@
 {
     "name": "bojana/tutorial",
     "description": "",
+    "autoload": {
+        "psr-0": {
+            "Speakap\\Tests": [ "php/tests/" ],
+            "Speakap": [ "php/src/" ]
+        }
+    },
     "require": {
          "speakap/sdk" : "*"
     },
