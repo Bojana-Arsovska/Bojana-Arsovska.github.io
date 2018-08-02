@@ -8,7 +8,7 @@ require 'vendor/autoload.php';
 
 use Speakap\SDK as SpeakapSDK;
 
-$signedRequest = new \Speakap\SDK\SignedRequest('2902858cc6000a00', '83355b5649dfb16063ebf05e9e692d358e7973df0eeb0365401ea412b70b2e99');
+$signedRequest = new \Speakap\SDK\SignedRequest('29065d3f64000b04', 'b3454de0bb2ab39529576fed610d0720d0a955bca16fe21d2913b538120e0da4');
 //
 // echo 'Bla';
 //
@@ -48,7 +48,7 @@ $signedParams = $signedRequest->getSignedParameters($_POST);
 
 $baseUrl = 'https://api.test.speakap.nl/networks/' . $signedParams['networkEID'];
 
-$accessToken = /* App ID */ '2902858cc6000a00_83355b5649dfb16063ebf05e9e692d358e7973df0eeb0365401ea412b70b2e99' /* Secret */;
+$accessToken = /* App ID */ '29065d3f64000b04_b3454de0bb2ab39529576fed610d0720d0a955bca16fe21d2913b538120e0da4' /* Secret */;
 
 $ch = curl_init("$baseUrl/users/{$signedParams['userEID']}/");
 
@@ -63,7 +63,7 @@ curl_setopt_array($ch, array(
 
 $response = curl_exec($ch);
 curl_close($ch);
-var_dump($response);
+//var_dump($response);
 $user = json_decode($response);
 
 echo "<p>Hello {$user->fullName}!</p>";
