@@ -9,13 +9,13 @@ require 'vendor/autoload.php';
 use Speakap\SDK as SpeakapSDK;
 
 $signedRequest = new \Speakap\SDK\SignedRequest('290691917f000c38', 'f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286');
-//
-// echo 'Bla';
-//
-// if (!$signedRequest->validateSignature($_POST)) {
-//     die('Invalid signature');
-// }
-//
+
+echo 'Bla';
+
+if (!$signedRequest->validateSignature($_POST)) {
+    die('Invalid signature');
+}
+
 // $encSignedReq = $signedRequest->getSignedRequest($_POST);
 //
 // echo <<<HTML
