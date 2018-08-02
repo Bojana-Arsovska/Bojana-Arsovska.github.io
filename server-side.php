@@ -63,7 +63,7 @@ curl_setopt_array($ch, array(
 
 $response = curl_exec($ch);
 curl_close($ch);
-//var_dump($response);
+var_dump($response);
 $user = json_decode($response);
 
 echo "<p>Hello {$user->fullName}!</p>";
