@@ -8,7 +8,7 @@ require 'vendor/autoload.php';
 
 use Speakap\SDK as SpeakapSDK;
 
-$signedRequest = new \Speakap\SDK\SignedRequest('29065d3f64000b04', 'b3454de0bb2ab39529576fed610d0720d0a955bca16fe21d2913b538120e0da4');
+$signedRequest = new \Speakap\SDK\SignedRequest('29068821bb00005c', '4da9392b8b5bf816d2a6d4feccce071c60a7e31b9dcfb3ac34a644779a30e29b');
 //
 // echo 'Bla';
 //
@@ -48,7 +48,7 @@ $signedParams = $signedRequest->getSignedParameters($_POST);
 
 $baseUrl = 'https://api.test.speakap.nl/networks/' . $signedParams['networkEID'];
 
-$accessToken = /* App ID */ '29065d3f64000b04_b3454de0bb2ab39529576fed610d0720d0a955bca16fe21d2913b538120e0da4' /* Secret */;
+$accessToken = /* App ID */ '29068821bb00005c_4da9392b8b5bf816d2a6d4feccce071c60a7e31b9dcfb3ac34a644779a30e29b' /* Secret */;
 
 $ch = curl_init("$baseUrl/users/{$signedParams['userEID']}/");
 
