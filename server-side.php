@@ -29,7 +29,7 @@ function getConfiguration($name)
 
     return $environments[$env][$name];
 }
-
+var_dump('i exited fuction No. 1');
 function getAccessToken($authorizationCode)
 {
 
@@ -58,6 +58,7 @@ function getAccessToken($authorizationCode)
 
     return $json->access_token;
 }
+var_dump('i accesed the token');
 
 function handleExternalRequest()
 {
@@ -78,8 +79,8 @@ function handleExternalRequest()
         echo "<p>Hello, $fullName</p> <img src='$avatar'>";
     } else {
         $baseUrl = getConfiguration('networkUrl');
-        $authUrl = 'ts.test.spekap.nl'.'/auth?client_id=2902858cc6000a00' .
-                       '&redirect_uri='.'https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php'.
+        $authUrl = '/auth?client_id=2902858cc6000a00' .
+                       '&redirect_uri=https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php'.
                        '&scope=profile.basic.read&state=123456';
         echo '<p>Hello world, I don\'t know who you are.</p>' .
              '<p><a href="' . htmlspecialchars($baseUrl . $authUrl) . '">Authenticate with Speakap</a></p>';
@@ -93,6 +94,7 @@ function handleExternalRequest()
     }
 }
 
+var_dump('i handdle the request');
 function handleIframeRequest()
 { // <--
     $signedRequest = new \Speakap\SDK\SignedRequest('290691917f000c38', 'f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286');
