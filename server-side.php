@@ -12,16 +12,16 @@ function getConfiguration($name)
 {
     $environments = array(
         'dogfood' => array(
-            'EID' => '08e1e1eadc000e6c',
+            'EID' => '08e1e1eadc000e6c',// <--
             'api' => 'https://api.test.speakap.nl',
             'authenticator' => 'https://authenticator.test.speakap.nl/oauth/v2/token',
-            'networkUrl' => 'https://ts.test.speakap.nl/'
+            'networkUrl' => 'https://ts.test.speakap.nl/'// <--
         ),
         'dcme' => array(
             'EID' => '0000000000000001',
             'api' => 'http://api.dev.speakap.nl',
             'authenticator' => 'http://authenticator.dev.speakap.nl/oauth/v2/token',
-            'networkUrl' => 'https://ts.test.speakap.nl/'
+            'networkUrl' => 'https://ts.test.speakap.nl/'// <--
         )
     );
 
@@ -38,11 +38,11 @@ function getAccessToken($authorizationCode)
 
     $client = new Client();
     $body = array(
-        'client_id' => '2902858cc6000a00',
+        'client_id' => '2902858cc6000a00',// <--
         'client_secret' => 'f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286',
         'code' => $authorizationCode,
         'grant_type' => 'authorization_code',
-        'redirect_uri' => "$networkUrl/helloworld/hello_world.php"
+        'redirect_uri' => "$networkUrl/bojana/server-side.php" // <--
     );
 
     try {
@@ -94,11 +94,8 @@ function handleExternalRequest()
 }
 
 function handleIframeRequest()
-{
-    $speakapSignedRequest = new \Speakap\SDK\SignedRequest(
-        '000A000000000001',
-        'helloworld'
-    );
+{ // <--
+    $signedRequest = new \Speakap\SDK\SignedRequest('290691917f000c38', 'f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286');
 
     if (!$speakapSignedRequest->validateSignature($_POST)) {
         die('I\'m sorry, but the request seems invalid. Please try again!' .
