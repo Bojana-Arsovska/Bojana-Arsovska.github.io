@@ -78,6 +78,7 @@ function handleExternalRequest()
 
         echo "<p>Hello, $fullName</p> <img src='$avatar'>";
     } else {
+      var_dump('entered');
         $baseUrl = getConfiguration('networkUrl');
         $authUrl = '/auth?client_id=2902858cc6000a00' .
                        '&redirect_uri=https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php'.
@@ -94,7 +95,7 @@ function handleExternalRequest()
     }
 }
 
-var_dump($authUrl);
+
 function handleIframeRequest()
 { // <--
     $signedRequest = new \Speakap\SDK\SignedRequest('290691917f000c38', 'f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286');
