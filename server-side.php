@@ -87,6 +87,8 @@ function handleExternalRequest()
              '<p><a href="' . htmlspecialchars($baseUrl . $authUrl) . '">Authenticate with Speakap</a></p>';
 
         var_dump($baseUrl);
+        var_dump("\n");
+
         var_dump($authUrl);
 
         if (isset($_GET['error'])) {
