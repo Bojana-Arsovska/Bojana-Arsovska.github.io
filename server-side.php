@@ -12,7 +12,7 @@ function getConfiguration($name)
 {
     $environments = array(
         'dogfood' => array(
-            'EID' => '08e1e1eadc000e6c',// <--
+            'EID' => '08e1e1eadc000e6c',
             'api' => 'https://api.test.speakap.nl',
             'authenticator' => 'https://authenticator.test.speakap.nl/oauth/v2/token',
             'networkUrl' => 'https://ts.test.speakap.nl/'// <--
@@ -42,7 +42,7 @@ function getAccessToken($authorizationCode)
         'client_secret' => 'f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286',
         'code' => $authorizationCode,
         'grant_type' => 'authorization_code',
-        'redirect_uri' => "$networkUrl/bojana/server-side.php" // <--
+        'redirect_uri' => "https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php"
     );
 
     try {
@@ -78,8 +78,8 @@ function handleExternalRequest()
         echo "<p>Hello, $fullName</p> <img src='$avatar'>";
     } else {
         $baseUrl = getConfiguration('networkUrl');
-        $authUrl = '/auth?client_id=000a000000000001' .
-                       '&redirect_uri=' . $baseUrl . '/helloworld/hello_world.php' .
+        $authUrl = '/auth?client_id=2902858cc6000a00' .
+                       '&redirect_uri=' .'https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php' . // <--
                        '&scope=profile.basic.read&state=123456';
         echo '<p>Hello world, I don\'t know who you are.</p>' .
              '<p><a href="' . htmlspecialchars($baseUrl . $authUrl) . '">Authenticate with Speakap</a></p>';
