@@ -15,7 +15,7 @@ function getConfiguration($name)
             'EID' => '2902858cc6000a00',
             'api' => 'https://api.test.speakap.nl',
             'authenticator' => 'https://authenticator.test.speakap.nl/oauth/v2/token',
-            'networkUrl' => 'https://dogfood.test.speakap.nl'
+            'networkUrl' => 'https://ts.test.speakap.nl/''
         ),
         'dcme' => array(
             'EID' => '0000000000000001',
