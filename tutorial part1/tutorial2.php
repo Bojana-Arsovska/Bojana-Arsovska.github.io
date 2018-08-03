@@ -28,3 +28,6 @@
         }
     ]
 }
+<!-- We have generated the following ID and secret:
+ID: 29065d3f64000b04
+secret: b3454de0bb2ab39529576fed610d0720d0a955bca16fe21d2913b538120e0da4 -->
