@@ -110,4 +110,3 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     handleExternalRequest();
 }
-var_dump($response);
