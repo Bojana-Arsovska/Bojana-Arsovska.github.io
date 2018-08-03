@@ -86,11 +86,6 @@ function handleExternalRequest()
         echo '<p>Hello world, I don\'t know who you are.</p>' .
              '<p><a href="' . htmlspecialchars($baseUrl . $authUrl) . '">Authenticate with Speakap</a></p>';
 
-        var_dump($baseUrl);
-        var_dump("----------------------");
-
-        var_dump($authUrl);
-
         if (isset($_GET['error'])) {
             echo '<p style="color: red">I got an authentication error: ' . $_GET['error'] . '</p>';
             if (isset($_GET['error_description'])) {
