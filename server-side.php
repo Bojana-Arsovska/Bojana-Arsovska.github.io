@@ -39,7 +39,7 @@ function getAccessToken($authorizationCode)
     $client = new Client();
     $body = array(
         'client_id' => '2902858cc6000a00',
-        'client_secret' => 'helloworld',//f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286
+        'client_secret' => 'f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286',
         'code' => $authorizationCode,
         'grant_type' => 'authorization_code',
         'redirect_uri' => "$networkUrl/helloworld/hello_world.php"
@@ -113,3 +113,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     handleExternalRequest();
 }
+var_dump($response);
