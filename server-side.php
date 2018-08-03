@@ -12,7 +12,7 @@ function getConfiguration($name)
 {
     $environments = array(
         'dogfood' => array(
-            'EID' => '2902858cc6000a00',
+            'EID' => '08e1e1eadc000e6c',
             'api' => 'https://api.test.speakap.nl',
             'authenticator' => 'https://authenticator.test.speakap.nl/oauth/v2/token',
             'networkUrl' => 'https://ts.test.speakap.nl/'
