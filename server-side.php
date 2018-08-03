@@ -94,7 +94,7 @@ function handleExternalRequest()
     }
 }
 
-var_dump('i handdle the request');
+var_dump('$authUrl');
 function handleIframeRequest()
 { // <--
     $signedRequest = new \Speakap\SDK\SignedRequest('290691917f000c38', 'f1cc9b8a064a00b623839e18940d288eeb40aac936946603563ebd2c27d21286');
