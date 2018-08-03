@@ -78,7 +78,7 @@ function handleExternalRequest()
         echo "<p>Hello, $fullName</p> <img src='$avatar'>";
     } else {
         $baseUrl = getConfiguration('networkUrl');
-        $authUrl = '/auth?client_id=2902858cc6000a00' .
+        $authUrl = 'ts.test.spekap.nl'.'/auth?client_id=2902858cc6000a00' .
                        '&redirect_uri='.'https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php'.
                        '&scope=profile.basic.read&state=123456';
         echo '<p>Hello world, I don\'t know who you are.</p>' .
