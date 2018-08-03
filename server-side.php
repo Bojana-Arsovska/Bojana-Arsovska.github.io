@@ -15,13 +15,13 @@ function getConfiguration($name)
             'EID' => '08e1e1eadc000e6c',
             'api' => 'https://api.test.speakap.nl',
             'authenticator' => 'https://authenticator.test.speakap.nl/oauth/v2/token',
-            'networkUrl' => 'https://ts.test.speakap.nl/'// <--
+            'networkUrl' => 'https://ts.test.speakap.nl'// <--
         ),
         'dcme' => array(
             'EID' => '0000000000000001',
             'api' => 'http://api.dev.speakap.nl',
             'authenticator' => 'http://authenticator.dev.speakap.nl/oauth/v2/token',
-            'networkUrl' => 'https://ts.test.speakap.nl/'// <--
+            'networkUrl' => 'https://ts.test.speakap.nl'// <--
         )
     );
 
