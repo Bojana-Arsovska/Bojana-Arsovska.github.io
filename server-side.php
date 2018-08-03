@@ -15,13 +15,13 @@ function getConfiguration($name)
             'EID' => '08e1e1eadc000e6c',
             'api' => 'https://api.test.speakap.nl',
             'authenticator' => 'https://authenticator.test.speakap.nl/oauth/v2/token',
-            'networkUrl' => 'https://ts.test.speakap.nl'// <--
+            'networkUrl' => 'https://ts.test.speakap.nl/'// <--
         ),
         'dcme' => array(
             'EID' => '0000000000000001',
             'api' => 'http://api.dev.speakap.nl',
             'authenticator' => 'http://authenticator.dev.speakap.nl/oauth/v2/token',
-            'networkUrl' => 'https://ts.test.speakap.nl'// <--
+            'networkUrl' => 'https://ts.test.speakap.nl/'// <--
         )
     );
 
@@ -79,17 +79,17 @@ function handleExternalRequest()
         echo "<p>Hello, $fullName</p> <img src='$avatar'>";
     } else {
 
-        // $baseUrl = getConfiguration('networkUrl');
-        // $authUrl = '/auth?client_id=2902858cc6000a00' .
-        //                '&redirect_uri=https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php'.
-        //                '&scope=profile.basic.read&state=123456';
+        $baseUrl = getConfiguration('networkUrl');
+        $authUrl = '/auth?client_id=2902858cc6000a00' .
+                       '&redirect_uri=https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php'.
+                       '&scope=profile.basic.read&state=123456';
         echo '<p>Hello world, I don\'t know who you are.</p>' .
-             '<p><a href="' . 'https://tutorial.hosting.speakap.io/experimental/bojana/server-side.php' . '">Authenticate with Speakap</a></p>';
+             '<p><a href="' . htmlspecialchars($baseUrl . $authUrl) . '">Authenticate with Speakap</a></p>';
 
-        // var_dump($baseUrl);
-        // var_dump("----------------------");
-        //
-        // var_dump($authUrl);
+        var_dump($baseUrl);
+        var_dump("----------------------");
+
+        var_dump($authUrl);
 
         if (isset($_GET['error'])) {
             echo '<p style="color: red">I got an authentication error: ' . $_GET['error'] . '</p>';
